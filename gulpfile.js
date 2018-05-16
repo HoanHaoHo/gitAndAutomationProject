@@ -21,4 +21,10 @@ gulp.task('css', () =>
         .pipe(gulp.dest('./dist/css'))
 );
 
+gulp.task('images', () =>
+    gulp.src('src/images/*')
+        .pipe(imagemin())
+        .pipe(gulp.dest('./dist/images'))
+);
+
 
