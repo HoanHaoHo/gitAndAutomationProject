@@ -8,7 +8,7 @@ var uglify = require('gulp-uglify');
 var pump = require('pump');
 
 gulp.task('default',['css','js','images'], () =>{
-  
+    
 })
 
 
@@ -35,6 +35,10 @@ gulp.task('js',()=>{
         .pipe(concat('main.js'))
         .pipe(uglify())
         .pipe(gulp.dest('./dist/js/'))
+})
+
+gulp.task('watch', function(){
+    gulp.watch('src/css/style.css', ['css'])
 })
 
 
