@@ -7,10 +7,6 @@ var concat = require('gulp-concat');
 var uglify = require('gulp-uglify');
 var pump = require('pump');
 
-gulp.task('default',['css','js','images'], () =>{
-    
-})
-
 
 gulp.task('css', () =>
     gulp.src('src/css/style.css')
@@ -41,4 +37,7 @@ gulp.task('watch', function(){
     gulp.watch('src/css/style.css', ['css'])
 })
 
+gulp.task('default',['css','js','images'], () =>{
+    
+})
 
