@@ -33,6 +33,7 @@ gulp.task('js',()=>{
             presets: ['env']
         }))
         .pipe(concat('main.js'))
+        .pipe(uglify())
         .pipe(gulp.dest('./dist/js/'))
 })
 
