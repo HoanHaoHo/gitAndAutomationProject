@@ -27,4 +27,12 @@ gulp.task('images', () =>
         .pipe(gulp.dest('./dist/images'))
 );
 
+gulp.task('js',()=>{
+    gulp.src('./src/js/**/*.js')
+        .pipe(babel({
+            presets: ['env']
+        }))
+        .pipe(gulp.dest('./dist/js/'))
+})
+
 
